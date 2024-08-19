@@ -60,11 +60,14 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
     (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux_NoVis.zip) (version 1) or [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux_NoVis.zip) (version 2) to obtain the "headless" version of the environment.  You will **not** be able to watch the agent without enabling a virtual screen, but you will be able to train the agent.  (_To watch the agent, you should follow the instructions to [enable a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above._)
 
-2. Place the file in the DRLND GitHub repository, in the `p2_continuous-control/` folder, and unzip (or decompress) the file. 
+2. Place the file in the DRLND GitHub repository, in the `p2_continuous-control/` folder, and unzip (or decompress) the file. If having issues getting the environment to work, your file path may be too long; try moving the repo higher up in your directory to see if this fixes the issues.
 
 ### Instructions
 
-Follow the instructions in `Continuous_Control.ipynb` to get started with training your own agent!  
+Follow the instructions in `Continuous_Control.ipynb` to get started with training your own agent! Notebook will work for solving the single reacher and multi-reacher environments.
+
+`solution_actor.pth` and `solution_critic.pth` contained the successfully trained agent. The `checkpoint_actor.pth` and `checkpoint_critic.pth` contain the checkpoint of the agent while training. The `.png` files are images of the score over episodes for training and testing using both the single and multi-reacher environments.
+`Continuous_Control.ipynb` contains the notebook to follow along for training an agent, while `model.py` contains the definition of the actor and critic networks. `ddpg_agent.py` contains the hyperparameters for DDPG and implements them with the given actor/critic networks. `Report.md` contains a summary of this project and a discussion of the results.
 
 ### (Optional) Challenge: Crawler Environment
 
