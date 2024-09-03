@@ -39,6 +39,27 @@ The environment is considered solved, when the average (over 100 episodes) of th
 having issues getting the environment to work, your file path may be too long; try moving the repo higher up in your directory to 
 see if this fixes the issues.
 
+3. Create (and activate) a new environment with Python 3.6.
+	- __Linux__ or __Mac__: 
+	```bash
+	conda create --name drlnd python=3.6
+	source activate drlnd
+	```
+	- __Windows__: 
+	```bash
+	conda create --name drlnd python=3.6 
+	activate drlnd
+	```
+
+4. Install several dependencies by navigating to the `python/` folder and running the command below in your anaconda terminal.  
+    ```bash
+    cd deep-reinforcement-learning/python
+    pip install .
+    ```
+Also, if running into issues with package installation in the environment: open `requirements.txt` in the `python` directory of the top level of the repo, using an Anaconda terminal, manually check the version of each package and install individually if not installed or older version is installed.
+
+5. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu. 
+
 ### Instructions
 
 Follow the instructions in `Tennis.ipynb` to get started with training your own agent!  
